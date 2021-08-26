@@ -9,18 +9,20 @@ AUthor: Bikal Koju
 
 ******Table Of Content*********
 
-1.global css
-2.Normalize css
-3.font family css
-4.Typography
-5.Main css
-    5.1.Header
-    5.2.Banner
-    5.3.About Section
-    5.4.Expertise Section
-    5.5.Work Section
-    5.6.Contact Section
-    5.7.Footer
+#global css
+#Normalize css
+#font family css
+#Typography
+#Buttons
+#social icons
+#Main css
+    #Header
+    #Banner
+    #About Section
+    #Expertise Section
+    #Work Section
+    #Contact Section
+    #Footer
 -----------------------------------------------
 ---------------------------------------------*/
 
@@ -139,15 +141,19 @@ ul,li{
 }
 
 .default-padding{
-    padding-block: 100px;
+    padding-block: 10rem;
 }
 
 .padding-top{
-    padding-top: 100px;
+    padding-top: 10rem;
 }
 
 .padding-bottom{
-    padding-bottom: 100px;
+    padding-bottom: 10rem;
+}
+
+.m-30{
+    margin-bottom: 30px;
 }
 
 .section-title{
@@ -177,8 +183,12 @@ ul,li{
     color: var(--secondary-font-color);
 }
 
+/*---typography-ends---*/
+
+/*---buttons---*/
 .primary-btn{
     display: inline-block;
+    width: 225px;
     padding: 15px 30px;
     font-size: 1.8rem;
     text-transform: uppercase;
@@ -192,7 +202,99 @@ ul,li{
         color: #222629;
     }
 }
-/*---typography-ends---*/
+
+.btn-2{
+    border-color: var(--bg-color);
+    background-color: var(--bg-color);
+    color: #fff;
+    &:hover{
+        background-color: var(--primary-font-color);
+        color: #fff;
+    }
+}
+
+.btn-3{
+    color: var(--bg-color);
+    border-color: var(--bg-color);
+    &:hover{
+        background-color: var(--bg-color);
+        color: #fff;
+    }
+}
+
+.about-section{
+    .btn-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+            margin-inline: 10px;
+        }
+    }
+}
+
+.start-project-btn{
+    text-align: center;
+}
+/*---buttons-ends---*/
+
+/*---social-icons---*/
+.social-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    li{
+        a{
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            margin: 0 5px 5px 5px;
+            font-size: 2.4rem;
+            border: 2px solid var(--secondary-font-color);
+            border-radius: 50%;
+            color: var(--secondary-font-color);
+            &:hover{
+                color: #fff;
+            }
+            &.linkedin:hover{
+                background-color: #0077b5;
+                border-color: #0077b5;
+            }
+            &.facebook:hover{
+                background-color: #3b5998;
+                border-color: #3b5998;
+            }
+            &.twitter:hover{
+                background-color: #1DA1F2;
+                border-color: #1DA1F2;
+            }
+        }
+    }
+}
+
+.social-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li{
+        margin-inline: 15px;
+        a{
+            font-size: 36px;
+            color: var(--primary-font-color);
+            &.linkedin:hover{
+                color: #0077b5;
+            }
+            &.facebook:hover{
+                color: #3b5998;
+            }
+            &.twitter:hover{
+                color: #1DA1F2;
+            }
+        }
+    }
+}
+/*---social-icons-ends---*/
 
 /*--main-css--*/
 
@@ -299,7 +401,6 @@ ul,li{
 
 /*banner*/
 .banner-section{
-    background-image: url(images/intro-bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -337,21 +438,6 @@ ul,li{
         font-size: 5.8rem;
         position: relative;
         margin-bottom: 20px;
-        &:before,&:after{
-            content: '';
-            position: absolute;
-            top: 50%;
-            transform: translatey(-50%);
-            width: 100px;
-            height: 1px;
-            background-color: #fff;
-        }
-        &:before{
-            right: 85%;
-        }
-        &:after{
-            left: 85%;
-        }
     }
     p{
         font-size: 2.4rem;
@@ -386,25 +472,6 @@ ul,li{
     }
 }
 
-.social-circle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-    li{
-        a{
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
-            margin: 0 5px 5px 5px;
-            font-size: 2.4rem;
-            border: 2px solid var(--secondary-font-color);
-            border-radius: 50%;
-            color: var(--secondary-font-color);
-        }
-    }
-}
-
 .about-content{
     margin-bottom: 30px;
     h3{
@@ -416,27 +483,6 @@ ul,li{
     }
 }
 
-.about-section{
-    .btn-wrap{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        a{
-            margin-inline: 10px;
-            border-color: var(--bg-color);
-        }
-        .cv-btn{
-            color: var(--bg-color);
-        }
-        .learn-more-btn,.cv-btn:hover{
-            background-color: var(--bg-color);
-            color: #fff;
-        }
-        .learn-more-btn:hover{
-            background-color: var(--primary-font-color);
-        }
-    }
-}
 /*about-section-ends*/
 
 /*expertise-section*/
@@ -457,32 +503,14 @@ ul,li{
         cursor: pointer;
         &:hover{
             background-color: #ccc;
+            color: #000;
+            border-color: #ccc;
         }
     }
     h3{
         font-size: 2.4rem;
         color: #fff;
     }
-}
-
-.tv-icon:hover{
-    color:  #e34c26;
-    border-color: #e34c26;
-}
-
-.bootstrap-icon:hover{
-    color:#080135;
-    border-color: #080135;
-}
-
-.code-icon:hover{
-    color: #000;
-    border-color: #000;
-}
-
-.wordpress-icon:hover{
-    color:  #21759b;
-    border-color: #21759b;
 }
 
 /*expertise-section-ends*/
@@ -554,18 +582,6 @@ ul,li{
     }
 }
 
-.start-project-btn{
-    text-align: center;
-    a{
-        border-color: var(--bg-color);
-        background-color: var(--bg-color);
-        color: #fff;
-        &:hover{
-            background-color: var(--primary-font-color);
-            color: #fff;
-        }
-    }
-}
 /*work-section-ends*/
 
 /*contact-section*/
@@ -634,24 +650,6 @@ ul,li{
 .footer{
     padding-top: 50px;
     padding-bottom: 20px;
-}
-.footer-top{
-    margin-bottom: 30px;
-    .social-links{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        li{
-            margin-inline: 15px;
-            a{
-                font-size: 36px;
-                color: var(--primary-font-color);
-                &:hover{
-                    color: var(--bg-color);
-                }
-            }
-        }
-    }
 }
 
 .footer-bottom{

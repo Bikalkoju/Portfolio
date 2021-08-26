@@ -8,18 +8,20 @@ AUthor: Bikal Koju
 
 ******Table Of Content*********
 
-1.global css
-2.Normalize css
-3.font family css
-4.Typography
-5.Main css
-    5.1.Header
-    5.2.Banner
-    5.3.About Section
-    5.4.Expertise Section
-    5.5.Work Section
-    5.6.Contact Section
-    5.7.Footer
+#global css
+#Normalize css
+#font family css
+#Typography
+#Buttons
+#social icons
+#Main css
+    #Header
+    #Banner
+    #About Section
+    #Expertise Section
+    #Work Section
+    #Contact Section
+    #Footer
 -----------------------------------------------
 ---------------------------------------------*/
 /*---global-css---*/
@@ -128,15 +130,19 @@ ul, li {
 }
 
 .default-padding {
-  padding-block: 100px;
+  padding-block: 10rem;
 }
 
 .padding-top {
-  padding-top: 100px;
+  padding-top: 10rem;
 }
 
 .padding-bottom {
-  padding-bottom: 100px;
+  padding-bottom: 10rem;
+}
+
+.m-30 {
+  margin-bottom: 30px;
 }
 
 .section-title {
@@ -169,8 +175,11 @@ ul, li {
   color: var(--secondary-font-color);
 }
 
+/*---typography-ends---*/
+/*---buttons---*/
 .primary-btn {
   display: inline-block;
+  width: 225px;
   padding: 15px 30px;
   font-size: 1.8rem;
   text-transform: uppercase;
@@ -187,7 +196,126 @@ ul, li {
   color: #222629;
 }
 
-/*---typography-ends---*/
+.btn-2 {
+  border-color: var(--bg-color);
+  background-color: var(--bg-color);
+  color: #fff;
+}
+
+.btn-2:hover {
+  background-color: var(--primary-font-color);
+  color: #fff;
+}
+
+.btn-3 {
+  color: var(--bg-color);
+  border-color: var(--bg-color);
+}
+
+.btn-3:hover {
+  background-color: var(--bg-color);
+  color: #fff;
+}
+
+.about-section .btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-section .btn-wrap a {
+  margin-inline: 10px;
+}
+
+.start-project-btn {
+  text-align: center;
+}
+
+/*---buttons-ends---*/
+/*---social-icons---*/
+.social-circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.social-circle li a {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 5px 5px 5px;
+  font-size: 2.4rem;
+  border: 2px solid var(--secondary-font-color);
+  border-radius: 50%;
+  color: var(--secondary-font-color);
+}
+
+.social-circle li a:hover {
+  color: #fff;
+}
+
+.social-circle li a.linkedin:hover {
+  background-color: #0077b5;
+  border-color: #0077b5;
+}
+
+.social-circle li a.facebook:hover {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+
+.social-circle li a.twitter:hover {
+  background-color: #1DA1F2;
+  border-color: #1DA1F2;
+}
+
+.social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-links li {
+  margin-inline: 15px;
+}
+
+.social-links li a {
+  font-size: 36px;
+  color: var(--primary-font-color);
+}
+
+.social-links li a.linkedin:hover {
+  color: #0077b5;
+}
+
+.social-links li a.facebook:hover {
+  color: #3b5998;
+}
+
+.social-links li a.twitter:hover {
+  color: #1DA1F2;
+}
+
+/*---social-icons-ends---*/
 /*--main-css--*/
 /*-header-*/
 .header {
@@ -317,7 +445,6 @@ ul, li {
 /*-header-ends-*/
 /*banner*/
 .banner-section {
-  background-image: url(images/intro-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -362,25 +489,6 @@ ul, li {
   margin-bottom: 20px;
 }
 
-.banner-text h3:before, .banner-text h3:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translatey(-50%);
-          transform: translatey(-50%);
-  width: 100px;
-  height: 1px;
-  background-color: #fff;
-}
-
-.banner-text h3:before {
-  right: 85%;
-}
-
-.banner-text h3:after {
-  left: 85%;
-}
-
 .banner-text p {
   font-size: 2.4rem;
   color: #ccc;
@@ -415,30 +523,6 @@ ul, li {
      object-fit: cover;
 }
 
-.social-circle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 30px;
-}
-
-.social-circle li a {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  margin: 0 5px 5px 5px;
-  font-size: 2.4rem;
-  border: 2px solid var(--secondary-font-color);
-  border-radius: 50%;
-  color: var(--secondary-font-color);
-}
-
 .about-content {
   margin-bottom: 30px;
 }
@@ -450,36 +534,6 @@ ul, li {
 
 .about-content h3 span {
   color: var(--primary-color);
-}
-
-.about-section .btn-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.about-section .btn-wrap a {
-  margin-inline: 10px;
-  border-color: var(--bg-color);
-}
-
-.about-section .btn-wrap .cv-btn {
-  color: var(--bg-color);
-}
-
-.about-section .btn-wrap .learn-more-btn, .about-section .btn-wrap .cv-btn:hover {
-  background-color: var(--bg-color);
-  color: #fff;
-}
-
-.about-section .btn-wrap .learn-more-btn:hover {
-  background-color: var(--primary-font-color);
 }
 
 /*about-section-ends*/
@@ -505,31 +559,13 @@ ul, li {
 
 .skill .skill-icon:hover {
   background-color: #ccc;
+  color: #000;
+  border-color: #ccc;
 }
 
 .skill h3 {
   font-size: 2.4rem;
   color: #fff;
-}
-
-.tv-icon:hover {
-  color: #e34c26;
-  border-color: #e34c26;
-}
-
-.bootstrap-icon:hover {
-  color: #080135;
-  border-color: #080135;
-}
-
-.code-icon:hover {
-  color: #000;
-  border-color: #000;
-}
-
-.wordpress-icon:hover {
-  color: #21759b;
-  border-color: #21759b;
 }
 
 /*expertise-section-ends*/
@@ -612,21 +648,6 @@ ul, li {
   visibility: visible;
 }
 
-.start-project-btn {
-  text-align: center;
-}
-
-.start-project-btn a {
-  border-color: var(--bg-color);
-  background-color: var(--bg-color);
-  color: #fff;
-}
-
-.start-project-btn a:hover {
-  background-color: var(--primary-font-color);
-  color: #fff;
-}
-
 /*work-section-ends*/
 /*contact-section*/
 .phone,
@@ -700,35 +721,6 @@ ul, li {
 .footer {
   padding-top: 50px;
   padding-bottom: 20px;
-}
-
-.footer-top {
-  margin-bottom: 30px;
-}
-
-.footer-top .social-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.footer-top .social-links li {
-  margin-inline: 15px;
-}
-
-.footer-top .social-links li a {
-  font-size: 36px;
-  color: var(--primary-font-color);
-}
-
-.footer-top .social-links li a:hover {
-  color: var(--bg-color);
 }
 
 .footer-bottom p {

@@ -1,4 +1,32 @@
-@media  screen and (max-width: 991px){
+@media screen and (min-width: 768px){
+    .banner-text{
+        h3{
+            &:before,&:after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translatey(-50%);
+            width: 100px;
+            height: 1px;
+            background-color: #fff;   
+            }
+            &:before{
+                right: 85%;
+            }
+            &:after{
+                left: 85%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .primary-menu > li{
+        margin-inline: 15px;
+    }
+}
+
+@media  screen and (max-width: 768px){
     .primary-menu{
         position:fixed;
         top:0;
@@ -26,5 +54,23 @@
 
     .hamburger-menu{
         display:block;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .about-section .btn-wrap{
+        flex-direction: column;
+        a:first-child{
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 420px){
+    html, body{
+        font-size: 50%;
+    }
+    .banner-section{
+        min-height: 500px;
     }
 }
