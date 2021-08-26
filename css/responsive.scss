@@ -1,0 +1,30 @@
+@media  screen and (max-width: 991px){
+    .primary-menu{
+        position:fixed;
+        top:0;
+        left:0; 
+        right:0;
+        bottom:0;
+        height:0;
+        visibility: hidden;
+        flex-direction: column;
+        background-color:rgba(0 ,0,0,0.9);
+        justify-content: center;
+        transition: all .3s ease-in-out;  
+        a{
+            visibility: hidden;
+            transition: all .2s ease-in-out;
+        } 
+        &.active{
+            visibility: visible;
+            height: 100%;
+            a{
+                visibility: visible;
+            }
+        }
+    }
+
+    .hamburger-menu{
+        display:block;
+    }
+}
