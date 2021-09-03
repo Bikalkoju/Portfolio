@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
     <header class="header">
         <div class="site-header">
@@ -80,7 +82,7 @@
                 </ul>
                 <div class="about-content">
                     <h3>Hi! I am a creative <span>Web Designer</span> based in Nepal. <br>
-                         I am insanely passionate about designing beautiful and functional website.</h3>
+                        I am insanely passionate about designing beautiful and functional website.</h3>
                 </div>
                 <div class="btn-wrap">
                     <a href="#" class="primary-btn btn-2" target="_self" title="">Learn More <span><i class="fas fa-long-arrow-alt-right"></i></span></a>
@@ -267,22 +269,31 @@
                 </div>
                 <div class="contact-form">
                     <p>Feel free to drop me a line! I would get back to you within 24 hours.</p>
-                    <form action="#">
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="row">
                             <div class="col-md-6">
-                                <input type="text" placeholder="Your Name*" class="your-name" required>
+                                <input type="text" placeholder="Your Name*" name="username" class="your-name" required>
                             </div>
                             <div class="col-md-6">
-                                <input type="email" placeholder="Your Email*" class="your-email" required>
+                                <input type="email" placeholder="Your Email*" name="mail" class="your-email" required>
                             </div>
                             <div class="col-md-6">
-                                <textarea name="message" class="message" placeholder="Drop Some Words*"></textarea>
+                                <textarea name="message" class="message" name="message" placeholder="Drop Some Words*"></textarea>
                             </div>
                             <div class="col-12">
                                 <button type="submit" class="primary-btn">Send <span><i class="fas fa-paper-plane"></i></span></button>
                             </div>
                         </div>
                     </form>
+                    <?php
+                        if (isset($_POST['submit'])) {
+                            $username = $_POST['username'];
+                            $mailFrom = $_POST['mail'];
+                            $message = $_POST['message'];
+
+                            mail("info@bikalkoju.com.np","Subject",$message, $mailFrom, $username);
+                        }
+                    ?>
                 </div>
             </div>
         </div>
@@ -307,4 +318,5 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
