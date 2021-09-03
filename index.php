@@ -269,7 +269,7 @@
                 </div>
                 <div class="contact-form">
                     <p>Feel free to drop me a line! I would get back to you within 24 hours.</p>
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                    <form action="#" netlify>
                         <div class="row">
                             <div class="col-md-6">
                                 <input type="text" placeholder="Your Name*" name="username" class="your-name" required>
@@ -285,15 +285,6 @@
                             </div>
                         </div>
                     </form>
-                    <?php
-                        if (isset($_POST['submit'])) {
-                            $username = $_POST['username'];
-                            $mailFrom = $_POST['mail'];
-                            $message = $_POST['message'];
-
-                            mail("info@bikalkoju.com.np","Subject",$message, $mailFrom, $username);
-                        }
-                    ?>
                 </div>
             </div>
         </div>
