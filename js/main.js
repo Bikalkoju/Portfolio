@@ -41,3 +41,10 @@ $(document).ready(function () {
       // Set the height of all those children to whichever was highest 
       $('.work-item',this).height(highestBox);
 });
+
+$(document).ready(function () {
+    $('.banner-text .primary-btn, .about-section .btn-2, .start-project-btn .btn-2').click(function () {
+        alert('This content is being constructed.');
+        return false;
+    });
+});
