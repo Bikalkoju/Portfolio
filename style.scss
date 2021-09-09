@@ -15,6 +15,7 @@ AUthor: Bikal Koju
 #Typography
 #Buttons
 #social icons
+#Preloader
 #Main css
     #Header
     #Banner
@@ -295,6 +296,69 @@ ul,li{
     }
 }
 /*---social-icons-ends---*/
+
+/*---preloader---*/
+#preloader{
+    align-items: center;
+    background: #000;
+    display: flex;
+    height:100%;
+    justify-content: center;
+    left:0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#loader{
+    animation: spin 2s linear infinite;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #fff;
+    display: block;
+    height: 150px;
+    width: 150px;
+}
+
+#loader:before,#loader:after{
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #fff;
+    content: '';
+    position: absolute;
+}
+
+#loader:before{
+    animation: spin 1.5s linear infinite;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    top: 15px;
+}
+
+#loader:after{
+    animation: spin 3s linear infinite;
+    bottom: -15px;
+    left: -15px;
+    right: -15px;
+    top: -15px;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.loaded #preloader{
+    transform: translateY(-100%);
+    transition: all .3s ease-out;
+    visibility: hidden;
+}
+/*---preloader-ends---*/
 
 /*--main-css--*/
 
