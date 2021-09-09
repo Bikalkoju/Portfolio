@@ -315,7 +315,7 @@ ul,li{
     animation: spin 2s linear infinite;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #fff;
+    border-top-color: var(--primary-color);
     display: block;
     height: 150px;
     width: 150px;
@@ -324,7 +324,7 @@ ul,li{
 #loader:before,#loader:after{
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #fff;
+    border-top-color: var(--primary-color);
     content: '';
     position: absolute;
 }
